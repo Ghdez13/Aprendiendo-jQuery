@@ -6,18 +6,56 @@
         <meta name="keywords" content="jQuery, JS, JavaScript"/>
         <meta name="description" content="Ejercicios para aprender como utilizar jQuery"/>
         <meta name="viewport" content="width=width-device, initial-scale=1.0"/>
-        <meta http-equiv="refresh" content="2"/>
+        <meta http-equiv="refresh" content="20"/>
         <meta name="author" content="Jerry Hernández"/>
         <title>Aprendiendo a utilizar jQuery</title>
         <script type="text/JavaScript" src="js/jquery-3.7.1.min.js"></script>
-        <script>
-            $(document).ready(function(){
-                console.log("jQuery y la web Cargados");
-            });
-        </script>
+        <script type="text/JavaScript" src="js/01-selectores.js"></script>
+        <style>
+            .zebra{
+                border: 5px dashed black;
+            }
+            .grande{
+                font-size: 30px;
+            }
+            .margen-superior{
+                display:block;
+                margin-top:45px;
+            }
+
+            .resaltado{
+                border-bottom:2px solid brown;
+            }
+        </style>      
     </head>
     <body>
         <h1>Aprendiendo jQuery</h1>
-        <p>Ejercicios de jQuery</p>
+        <ul>
+            <li><a href="https://www.google.com" title="Google">Ir a Google</a></li>
+            <li><a href="https://www.facebook.com" title="Facebook">Ir a Facebook</a></li>
+            <li><a href="#" title="Twitter">Ir a Twitter</a></li>
+            <li><a href="#" title="OnlyFans">Ir a OnlyFans</a></li>
+            <li><a href="#" title="Grind">Ir a Grind</a></li>
+
+            
+
+
+
+        </ul>
+        <p id="rojo" class="sin_borde">Ejercicios de jQuery</p>
+        <p id="amarillo" class="zebra">Practicando con selectores</p>
+        <p id="verde" class="sin_borde">Quiero ser un parrafo verde</p>
+        <p class="zebra">Soy unn parrafo blanco</p>
+
+        <div id="caja">
+            <p>Hola soy una caja</p>
+            <ul>
+                <li>Elemento 1</li>
+                <li id="elemento2">Elemento 2</li>
+            </ul>
+            <span class="resaltado">Soy un span</span>
+        </div>
+
+        
     </body>
 </html>
