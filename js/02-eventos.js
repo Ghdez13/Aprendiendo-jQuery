@@ -90,7 +90,7 @@ $(document).ready(function () {
     le mouvement de la souris
     */
 
-    $(document).mousemove(function () {
+    $(document).mousemove(function (event) {
         $("body").css("cursor","none")
         $("#sigueme").css("left", event.clientX)
             .css("top", event.clientY);
