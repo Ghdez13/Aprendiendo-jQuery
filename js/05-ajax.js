@@ -32,23 +32,42 @@ $(document).ready(function () {
 
     $("#formulario").submit(function (e) {
         e.preventDefault();
+
         var usuario = {
             name: $('input[name="first_name"]').val(),
             web: $('input[name="web"]').val()
         };
-        console.log(usuario);
-        $.post($(this).attr("action"), usuario, function (response) {
-            console.log(response);
-        }).done(function(){
-            alert("Usuario agregado correctamente");
+
+         /*  $.post($(this).attr("action"), usuario, function (response) {
+                console.log(response);
+            }).done(function(){
+                alert("Usuario agregado correctamente");
+            });*/
+
+            
+        //$.ajax
+
+        $.ajax({
+            type: "POST",
+            url: $(this).attr("action"),
+            data: usuario,
+            beforeSend: function () {
+                console.log("Enviando usuario...");
+            },
+            success: function (response) {
+                console.log(response);
+            },
+            error: function () {
+                console.log("A ocurrido un error");
+            },
+            timeout: 1000
         });
+
         return false;
     });
 
-    //$.ajax
 
-    /*
-    
-    */
+
+
 
 });
